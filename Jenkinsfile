@@ -29,7 +29,8 @@ pipeline {
     stage('Incorporate IQ remediation changes to package-lock.json') {
       when {
         // Only work with branches we recognize as created by Nexus IQ
-        branch pattern: ".*-to-.*", comparator: "REGEXP"
+       // branch pattern: ".*-to-.*", comparator: "REGEXP"
+        branch 'master'
       }
       steps {
         script {
